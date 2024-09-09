@@ -1,0 +1,135 @@
+﻿  正在清理远程项目目录
+  正在验证源
+  正在将源远程复制到“192.168.68.128”
+  正在验证体系结构
+  正在验证体系结构
+  正在启动远程生成
+  正在编译源:
+  Buffer.c
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(16,38): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(16,38): warning :    16 |         buffer->data = (char*)malloc(size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(16,38): warning :       |                                      ^~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(19,33): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(19,33): warning :    19 |         memset(buffer->data, 0, size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(19,33): warning :       |                                 ^~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(50,62): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(50,62): warning :    50 |         memcpy(buffer->data, buffer->data + buffer->readPos, readable);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(50,62): warning :       |                                                              ^~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(58,61): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(58,61): warning :    58 |         void* temp = realloc(buffer->data, buffer->capacity + size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(58,61): warning :       |                                            ~~~~~~~~~~~~~~~~~^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(63,44): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(63,44): warning :    63 |         memset(temp + buffer->capacity, 0, size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(63,44): warning :       |                                            ^~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(89,51): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(89,51): warning :    89 |     memcpy(buffer->data + buffer->writePos, data, size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(89,51): warning :       |                                                   ^~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(96,16): warning : conversion from ‘size_t’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(96,16): warning :    96 |     int size = strlen(data);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(96,16): warning :       |                ^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(108,22): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(108,22): warning :   108 |     vec[0].iov_len = writeable;
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(108,22): warning :       |                      ^~~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(112,18): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(112,18): warning :   112 |     int result = readv(fd, vec, 2);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(112,18): warning :       |                  ^~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(136,56): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(136,56): warning :   136 |     char* ptr = memmem(buffer->data + buffer->readPos, bufferReadableSize(buffer), "\r\n", 2);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(136,56): warning :       |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,66): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,66): warning :   146 |         int count = send(socket, buffer->data + buffer->readPos, readable, MSG_NOSIGNAL);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,66): warning :       |                                                                  ^~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,21): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,21): warning :   146 |         int count = send(socket, buffer->data + buffer->readPos, readable, MSG_NOSIGNAL);
+C:\CppProjects\ReactorHttp\ReactorHttp\Buffer.c(146,21): warning :       |                     ^~~~
+  Channel.c
+  ChannelMap.c
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(10,47): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(10,47): warning :    10 |     map->list = (struct Channel**)malloc(size * sizeof(struct Channel*));
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(10,47): warning :       |                                               ^
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(42,60): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(42,60): warning :    42 |         struct Channel** temp = realloc(map->list, curSize * unitSize);
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(42,60): warning :       |                                                    ~~~~~~~~^~~~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(48,64): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(48,64): warning :    48 |         memset(&map->list[map->size], 0, (curSize - map->size) * unitSize);
+C:\CppProjects\ReactorHttp\ReactorHttp\ChannelMap.c(48,64): warning :       |                                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+  EpollDispatcher.c
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(58,17): warning : conversion to ‘uint32_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(58,17): warning :    58 |     ev.events = events;
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(58,17): warning :       |                 ^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(105,22): warning : conversion to ‘int’ from ‘uint32_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(105,22): warning :   105 |         int events = data->events[i].events;
+C:\CppProjects\ReactorHttp\ReactorHttp\EpollDispatcher.c(105,22): warning :       |                      ^~~~
+  EventLoop.c
+  HttpRequest.c
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(83,19): warning : initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(83,19): warning :    83 |     char* space = end;
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(83,19): warning :       |                   ^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(86,35): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(86,35): warning :    86 |         space = memmem(start, end - start, sub, strlen(sub));
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(86,35): warning :       |                               ~~~~^~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(89,18): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(89,18): warning :    89 |     int length = space - start;
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(89,18): warning :       |                  ^~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(90,38): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(90,38): warning :    90 |     char* tmp = (char*)malloc(length + 1);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(90,38): warning :       |                               ~~~~~~~^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(91,25): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(91,25): warning :    91 |     strncpy(tmp, start, length);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(91,25): warning :       |                         ^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(104,20): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(104,20): warning :   104 |     int lineSize = end - start;
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(104,20): warning :       |                    ^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(157,24): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(157,24): warning :   157 |         int lineSize = end - start;
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(157,24): warning :       |                        ^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(159,38): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(162,47): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(162,47): warning :   162 |             char* key = malloc(middle - start + 1);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(162,47): warning :       |                                ~~~~~~~~~~~~~~~^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(163,40): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(163,40): warning :   163 |             strncpy(key, start, middle - start);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(163,40): warning :       |                                 ~~~~~~~^~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(166,51): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(166,51): warning :   166 |             char* value = malloc(end - middle - 2 + 1);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(166,51): warning :       |                                  ~~~~~~~~~~~~~~~~~^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(167,53): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(167,53): warning :   167 |             strncpy(value, middle + 2, end - middle - 2);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(167,53): warning :       |                                        ~~~~~~~~~~~~~^~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(319,19): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(319,19): warning :   319 |             *to = hexToDec(from[1]) * 16 + hexToDec(from[2]);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(319,19): warning :       |                   ^~~~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(429,19): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(429,19): warning :   429 |         int len = read(fd, buf, sizeof buf);
+C:\CppProjects\ReactorHttp\ReactorHttp\HttpRequest.c(429,19): warning :       |                   ^~~~
+  Httpresponse.c
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(13,56): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(13,56): warning :    13 |     response->headers = (struct ResponseHeader*)malloc(size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(13,56): warning :       |                                                        ^~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(16,30): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(16,30): warning :    16 |     bzero(response->headers, size);
+C:\CppProjects\ReactorHttp\ReactorHttp\Httpresponse.c(16,30): warning :       |                              ^~~~
+  main.c
+  PollDispatcher.c
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(60,35): warning : conversion from ‘int’ to ‘short int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(60,35): warning :    60 |             data->fds[i].events = events;
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(60,35): warning :       |                                   ^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(113,35): warning : conversion from ‘int’ to ‘short int’ may change value [-Wconversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(113,35): warning :   113 |             data->fds[i].events = events;
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(113,35): warning :       |                                   ^~~~~~
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(127,45): warning : conversion to ‘nfds_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(127,45): warning :   127 |     int count = poll(data->fds, data->maxfd + 1, timeout * 1000);
+C:\CppProjects\ReactorHttp\ReactorHttp\PollDispatcher.c(127,45): warning :       |                                 ~~~~~~~~~~~~^~~
+  SelectDispatcher.c
+  TcpConnection.c
+  TcpServer.c
+  ThreadPool.c
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(12,84): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(12,84): warning :    12 |     pool->workerThreads = (struct WorkerThread*)malloc(sizeof(struct WorkerThread) * count);
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(12,84): warning :       |                                                                                    ^
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(46,21): warning : operation on ‘pool->index’ may be undefined [-Wsequence-point]
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(46,21): warning :    46 |         pool->index = ++pool->index % pool->threadNum;
+C:\CppProjects\ReactorHttp\ReactorHttp\ThreadPool.c(46,21): warning :       |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  WorkerThread.c
+  正在链接对象
+  ReactorHttp.vcxproj -> C:\CppProjects\ReactorHttp\ReactorHttp\bin\x64\Debug\ReactorHttp.out
